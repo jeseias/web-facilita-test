@@ -1,7 +1,9 @@
+import { AdminContainer } from "@/layouts/admin-container/admin-container";
+
 export const DashboardPage = () => {
   return (
-    <div className="">
+    <AdminContainer>
       <h1>Dashboard Page</h1>
-    </div>
+    </AdminContainer>
   );
 };

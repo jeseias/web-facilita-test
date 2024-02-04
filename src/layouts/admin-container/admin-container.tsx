@@ -7,7 +7,9 @@ export const AdminContainer = ({ children }: PropsWithChildren) => {
         Aside
       </aside>
       <header className="col-start-2 col-end-3 border-b">Header</header>
-      <main className="col-start-2 col-end-3">{children}</main>
+      <main className="col-start-2 col-end-3 w-full max-w-[1440px] mx-auto">
+        {children}
+      </main>
     </div>
   );
 };

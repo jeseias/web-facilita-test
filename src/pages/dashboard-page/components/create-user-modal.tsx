@@ -2,12 +2,12 @@ import { Button } from "@/components/ui/button";
 import {
   Dialog,
   DialogContent,
-  DialogDescription,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { useOpen } from "@/hooks/use-open";
+import { CreateUserForm } from "./create-user-form";
 
 export const CreateUserModal = () => {
   const { setIsOpen, isOpen } = useOpen();
@@ -20,10 +20,8 @@ export const CreateUserModal = () => {
         </DialogTrigger>
         <DialogContent className="sm:max-w-[425px]">
           <DialogHeader>
-            <DialogTitle>New Client</DialogTitle>
-            <DialogDescription>
-              Make changes to your profile here. Click save when you're done.
-            </DialogDescription>
+            <DialogTitle className="mb-10">New Client</DialogTitle>
+            <CreateUserForm />
           </DialogHeader>
           {/* <ProfileForm /> */}
         </DialogContent>

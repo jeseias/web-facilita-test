@@ -31,6 +31,7 @@ export const useApiCreateClient = () => {
         description: "New client added",
       });
     },
+    onError() {
       toast({
         title: "Error",
         description: "Error while creating client",

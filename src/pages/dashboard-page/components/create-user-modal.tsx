@@ -23,7 +23,6 @@ export const CreateUserModal = () => {
             <DialogTitle className="mb-10">New Client</DialogTitle>
             <CreateUserForm />
           </DialogHeader>
-          {/* <ProfileForm /> */}
         </DialogContent>
       </Dialog>
     </div>

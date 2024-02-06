@@ -12,10 +12,15 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { userTableColumns } from "./user-table-column";
+import { useApiLoadClients } from "@/services/use-api-load-clients";
 
 export const UsersTable = () => {
+  const { data } = useApiLoadClients({ limit: 10, page: 1 });
+
+  console.log(data);
+
   const table = useReactTable({
-    data: [],
+    data: data?.clients || [],
     columns: userTableColumns,
     getCoreRowModel: getCoreRowModel(),
   });

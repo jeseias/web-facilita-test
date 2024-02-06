@@ -10,6 +10,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { z } from "zod";
 import { Button } from "@/components/ui/button";
+import { useApiCreateClient } from "@/services/use-api-create-client";
 
 const formSchema = z.object({
   name: z.string(),
@@ -20,13 +21,14 @@ const formSchema = z.object({
 type FormData = z.infer<typeof formSchema>;
 
 export const CreateUserForm = () => {
+  const { mutate: createClient } = useApiCreateClient();
   const form = useForm<FormData>({
     resolver: zodResolver(formSchema),
     defaultValues: {},
   });
 
   function onSubmit(values: FormData) {
-    console.log(values);
+    createClient(values);
   }
 
   return (

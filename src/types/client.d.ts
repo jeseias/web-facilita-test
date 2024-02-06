@@ -5,4 +5,10 @@ declare namespace Client {
     email: string;
     phone: string;
   }
+
+  interface CreateClientParams {
+    name: string 
+    name: string 
+    phone: string
+  }
 }

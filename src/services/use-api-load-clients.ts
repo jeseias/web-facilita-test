@@ -13,7 +13,7 @@ interface Response {
 
 const query = async ({ limit, page }: Props) => {
   const response = await api.get<Response>(
-    `/clients?page=${limit}&page=${page}`
+    `/clients?limit=${limit}&page=${page}`
   );
 
   return response.data;

@@ -4,7 +4,7 @@ import { queryClient } from "@/lib/query-client";
 import { useMutation } from "@tanstack/react-query";
 
 interface Response {
-  client: Client.Model;
+  clients: Client.Model[];
 }
 
 const mutationFn = async (body: Client.CreateClientParams) => {
@@ -18,7 +18,7 @@ export const useApiCreateClient = () => {
   return useMutation({
     mutationFn,
     onMutate(item) {
-      queryClient.setQueryData<Response>(["clients", 10, 1], (old) => {
+      queryClient.setQueryData(["clients", 10, 1], (old: Response) => {
         return {
           ...old,
           clients: [...old.clients, { ...item, id: old.clients.length + 1 }],

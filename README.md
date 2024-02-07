@@ -1,7 +1,5 @@
 # Web Facilita
 
-### How to Run
-
 #### Prerequisites
 
 - Ensure that you have [nodejs](https://nodejs.org/en) installed. Use version 20.9

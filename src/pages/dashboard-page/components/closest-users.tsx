@@ -15,8 +15,6 @@ export const ClosestUsers = () => {
 
   const { isLoading, data } = useApiLoadClosestClients();
 
-  console.log("==>==>==>", data);
-
   return (
     <div className="">
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
